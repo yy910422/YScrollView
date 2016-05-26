@@ -2,24 +2,27 @@
 ***
 
 #### 使用纯代码创建的View
-'let scrollView = YScrollView(frame: CGRectMake(0, 200, self.view.frame.width, 150))
+```swift
+	let scrollView = YScrollView(frame: CGRectMake(0, 200, self.view.frame.width, 150))
         scrollView.delegate = self
         scrollView.pageImagesURL = [NSURL(string: "http://pic47.nipic.com/20140909/2531170_213531089000_2.jpg")!,NSURL(string: "http://pic.nipic.com/2007-11-09/200711912453162_2.jpg")!,NSURL(string: "http://pic.nipic.com/2007-11-09/200711912453162_2.jpg")!,NSURL(string: "http://pic.nipic.com/2007-11-09/200711912453162_2.jpg")!]
         scrollView.showPageController = true
         scrollView.timeDelay = 2.5
         scrollView.pageDirection = YScrollView.PageControllerDirection.Right
-        self.view.addSubview(scrollView)'
+        self.view.addSubview(scrollView)
+```
         
 ***
 #### 使用StoryBoard创建
 
 首先在StoryBoard里面拖一个View 然后让这个View 继承YScrollView类，然后使用下面这段代码就可以了
-'yScrollView.delegate = self
+```swift
+	yScrollView.delegate = self
         yScrollView.pageImagesURL = [NSURL(string: "http://pic47.nipic.com/20140909/2531170_213531089000_2.jpg")!,NSURL(string: "http://pic.nipic.com/2007-11-09/200711912453162_2.jpg")!,NSURL(string: "http://pic.nipic.com/2007-11-09/200711912453162_2.jpg")!,NSURL(string: "http://pic.nipic.com/2007-11-09/200711912453162_2.jpg")!]
         yScrollView.showPageController = true
         yScrollView.timeDelay = 2.5
         yScrollView.pageDirection = YScrollView.PageControllerDirection.Right
-'
+```
 ##### 上面几行代码的意思是：
 ######.delegate：
 设置轮播图控件的代理，需要ViewController实现YScrollViewDelegate协议，这个协议只有一个方法：
