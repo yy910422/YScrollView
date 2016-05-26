@@ -238,7 +238,7 @@ class YScrollView: UIView,UIScrollViewDelegate {
     }
     
     //开始拖动时结束定时器
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         if autoDisplay {
             removeTimer()
         }
